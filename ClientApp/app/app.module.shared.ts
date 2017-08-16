@@ -8,6 +8,8 @@ import { NavMenuComponent } from './components/navmenu/navmenu.component';
 import { HomeComponent } from './components/home/home.component';
 import { FetchDataComponent } from './components/fetchdata/fetchdata.component';
 import { CounterComponent } from './components/counter/counter.component';
+import { EventAppComponent } from './components/event/eventapp.component';
+import { NavBarComponent} from './components/event/nav/navbar.component';
 
 export const sharedConfig: NgModule = {
     bootstrap: [ AppComponent ],
@@ -16,7 +18,9 @@ export const sharedConfig: NgModule = {
         NavMenuComponent,
         CounterComponent,
         FetchDataComponent,
-        HomeComponent
+        HomeComponent,
+        EventAppComponent,
+        NavBarComponent
     ],
     imports: [
         RouterModule.forRoot([
@@ -24,6 +28,7 @@ export const sharedConfig: NgModule = {
             { path: 'home', component: HomeComponent },
             { path: 'counter', component: CounterComponent },
             { path: 'fetch-data', component: FetchDataComponent },
+            { path: 'event-app', component: EventAppComponent},
             { path: '**', redirectTo: 'home' }
         ]),
         ToastrModule.forRoot()
