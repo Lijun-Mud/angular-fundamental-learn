@@ -2,6 +2,8 @@
   "name": "angular_fundamental_learn",
   "version": "0.0.0",
   "scripts": {
+    "webpack-dev": "set NODE_ENV=development && webpack",
+    "webpack-dev-css": "npm run webpack-dev && set NODE_ENV=development && webpack --config webpack.config.vendor.js ",
     "test": "karma start ClientApp/test/karma.conf.js"
   },
   "dependencies": {
