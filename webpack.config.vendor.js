@@ -16,7 +16,6 @@ module.exports = (env) => {
         },
         entry: {
             vendor: [
-                '@angular/animations',
                 '@angular/common',
                 '@angular/compiler',
                 '@angular/core',
@@ -32,7 +31,8 @@ module.exports = (env) => {
                 'event-source-polyfill',
                 'jquery',
                 'zone.js',
-                'ngx-toastr/toastr.css'
+                '@angular/animations',
+                'ngx-toastr/toastr.css',
             ]
         },
         output: {
