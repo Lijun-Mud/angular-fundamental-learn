@@ -2,7 +2,7 @@
 
 @Injectable()
 export class EventService {
-    getEvents=() => {
+    getEvents()  {
         return Events;
     }
 }

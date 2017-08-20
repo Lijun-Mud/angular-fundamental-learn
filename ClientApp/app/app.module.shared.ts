@@ -9,7 +9,10 @@ import { HomeComponent } from './components/home/home.component';
 import { FetchDataComponent } from './components/fetchdata/fetchdata.component';
 import { CounterComponent } from './components/counter/counter.component';
 import { EventAppComponent } from './components/event/eventapp.component';
-import { NavBarComponent} from './components/event/nav/navbar.component';
+import { NavBarComponent } from './components/event/nav/navbar.component';
+import { EventsListComponent } from './components/event/event-list.component';
+import { EventThumbnailComponent } from './components/event/event-thumbnail';
+import { EventService } from './components/event/shared/event.service';
 
 export const sharedConfig: NgModule = {
     bootstrap: [ AppComponent ],
@@ -20,7 +23,9 @@ export const sharedConfig: NgModule = {
         FetchDataComponent,
         HomeComponent,
         EventAppComponent,
-        NavBarComponent
+        NavBarComponent,
+        EventsListComponent,
+        EventThumbnailComponent
     ],
     imports: [
         RouterModule.forRoot([
@@ -32,5 +37,8 @@ export const sharedConfig: NgModule = {
             { path: '**', redirectTo: 'home' }
         ]),
         ToastrModule.forRoot()
+    ],
+    providers: [
+        EventService
     ]
 };

@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import { sharedConfig } from './app.module.shared';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+
 @NgModule({
     bootstrap: sharedConfig.bootstrap,
     declarations: sharedConfig.declarations,
@@ -16,8 +17,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         ...sharedConfig.imports
     ],
     providers: [
-        { provide: 'ORIGIN_URL', useValue: location.origin }
+        { provide: 'ORIGIN_URL', useValue: location.origin },
+        ...sharedConfig.providers
     ]
 })
+
 export class AppModule {
 }
